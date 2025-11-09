@@ -1,0 +1,14 @@
+%% #1 flagpole Chapra 19.11
+data = readmatrix('Wind Force.xlsx')
+L = ; %vector with each L value, first column
+F=; %vector with each Force value, second column
+%use trapz to compute netforce
+
+
+%compute numerator of line of action using trapz
+
+%compute denominator of line of action using trapz
+
+%compute line of action
+netforce=
+lineofaction=

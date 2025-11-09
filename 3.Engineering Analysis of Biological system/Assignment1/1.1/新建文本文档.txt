@@ -1,0 +1,17 @@
+%% HW1 Chapra 3.9.  Water velocity in different channels
+% Compute the velocity for 5 different channels
+
+%% define the function, using anonymous function format
+U=@(n,S,B,H)     ;
+
+%% read in data
+data=readmatrix();
+rough=data(:,1);
+slope=;
+width=;
+depth=;
+vel=(rough,slope,width,depth);
+
+%% report velocities for 3rd and 5th channels
+vel3=vel(3)
+vel5=vel(5)

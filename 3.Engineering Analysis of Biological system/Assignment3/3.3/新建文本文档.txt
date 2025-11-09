@@ -1,0 +1,41 @@
+%% a) plot the polynomial
+x=0:0.5:30;
+
+%define the coefficients using a vector
+p=[                                          ];
+%compute the function using polyval, and plot
+y=polyval(p,x);
+figure
+plot(x,y)
+hold on
+
+%% b) obtain the exact integral solution from 0 to 30
+% Use either polyint of the polynomial, or
+% make the coefficients yourself by manual integration and then use polyval
+x1=30;
+%using polyint and polyval
+pe=       %gives the polynomial coefficients of the exact integral
+Iexact=        %evaluates the integral from 0 to 30
+%Or using coefficients
+pa=[                                                  ];
+Iexact2=
+
+%% c) trapezoidal rule 
+xt1=linspace(     );%4 segments
+xt2=linspace(     );%6 segments
+yt1=polyval(     );
+yt2=polyval(     );
+Itrap4=trapz(      )
+Itrap6=trapz(      )
+
+%% plotting
+subplot(2,1,1); plot(x,y); hold on
+plot(xt1,yt1,'ro-')%4 segments
+xlabel('x');ylabel('y');title('Four Segments');
+
+subplot(2,1,2); plot(x,y);hold on %6 segments
+plot(xt2,yt2,'ro-')
+xlabel('x');ylabel('y');title('Six Segments');
+etrap4=
+etrap6=
+

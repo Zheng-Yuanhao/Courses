@@ -1,0 +1,33 @@
+%% #4 Chapra 22.19  Groundwater nonlinear 2nd-order ODE shooting method
+%use shooting method and residual function to obtain dz/dx such that
+%h(1000)=5 m
+%kHdh/dx = z 
+
+tspan=0:0.1:1000;
+%guess initial slope = za = 0.1
+
+%use fzero and res function with ode45
+
+
+%% Output
+plot(x,h(:,1),'linewidth',1.6);
+
+%Report hshoot200, hshoot700
+k200=find(abs(x-200)<1e-2);
+hshoot200=h(k200,1)
+k700=               ;
+hshoot700=       ;
+
+%% functions
+function dh = grndwtr( x,h )
+%Chapra 22.19 groundwater aquifer problem
+%let z=K*h*dh/dx
+N=0.0001; K=1;
+dh=[      ;            ]; %the 2 nonlinear ODEs
+end
+
+function r=res22_19(za)
+%Chapra problem 22.19 nonlin ODE 
+[x,h]= ode45(@grndwtr, [       ], [      ]);
+r=                 ;
+end

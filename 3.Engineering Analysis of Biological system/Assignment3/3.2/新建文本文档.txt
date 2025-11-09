@@ -1,0 +1,35 @@
+%% #2 Microbial inactivation 
+%enter all parameter values given in the HW
+c=70; B=.0141; cmB=c-B;
+Tr=    ;Dr=    ;z=    ;
+t=0:60; %times, min
+%define function to compute temperature values for all times t
+T=@(t,c,cmB)49.5+ ...    ;
+%compute temp
+Temp=T(t,c,cmB);
+
+%sent up the integrand
+intgrnd =                  ;
+%use cumtrapz to get cumulative area under curve at each time
+C=cumtrapz(  ,    ); 
+
+%compute logN at each time
+logN =               ;
+
+%plot two-axis plot
+yyaxis left
+plot(t,logN);
+ylabel('logN');
+%to set yleft axis limits, can use
+axis([0 60 round(min(logN)) round(max(logN))])
+
+yyaxis right
+plot(t,Temp);
+ylabel('Temperature');
+%to set yright axis limits, can use
+axis([0 60 round(min(Temp)) round(max(Temp),-1)]) %The -1 rounds to the nearest multiple of 10
+
+%save values of logN50, Temp50
+[C,I]=find(t==50,1);
+logN50=        ;
+Temp50=        ;

@@ -1,0 +1,15 @@
+%% HW 4.2 Beck p. 25, 1.1
+%1 find intercept, slope using least squares
+load Tk
+T=Tk(:,1); %temperatures, deg C, independent variabl
+k=Tk(:,2); %thermal conductivity, W/mK
+n=length(T);
+%% set up sensitivity matrix
+X= [             ];
+%% define Y
+Y = 
+%estimate parameters using Eq. 51, left divisiion
+b=           :
+%Use Eq. 51 to estimate b
+b1=b(1)
+b2=b(2)
